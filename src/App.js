@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Test React App</h1>
-        <Button label="Click me" onClick={handleClick} />
+        <Button label="Click me to test me" onClick={handleClick} />
       </header>
     </div>
   );
