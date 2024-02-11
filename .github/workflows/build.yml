@@ -1,0 +1,34 @@
+---
+- name: Build and test
+
+  on:
+    push:
+      branches:
+        - main
+
+  jobs:
+    build:
+      runs-on: ubuntu-latest
+
+
+      steps:
+
+      - name: checkout Repository
+        uses: actions/checkout@v3
+
+      - name: setup nodejs
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+
+
+      - name: install dependencies
+        run: npm install
+
+
+      - name: build react app
+        run: npm run build
+
+
+      - name: run tests
+        run: npm run test
