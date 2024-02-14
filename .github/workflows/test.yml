@@ -1,0 +1,20 @@
+name: test action file
+
+on: 
+ push:
+   branches:
+     - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: predefined actions
+      uses: actions/checkout@v3
+    - name: predefined actions
+      uses: actions/setup-go@v2
+      with:
+        go-version: '1.14.0'
+    - name: run go program
+      run: go run helloworld.go
