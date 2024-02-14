@@ -18,3 +18,17 @@ jobs:
         go-version: '1.14.0'
     - name: run go program
       run: go run helloworld.go
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: predefined actions for checking out code.
+      uses: actions/checkout@v3
+      
+    - name: predefined actions
+      uses: actions/setup-node@v3
+      with:
+       node-version: '14'
+
+    - name: install npm
+      run: npm i
