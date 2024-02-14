@@ -9,7 +9,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-
+    - name: predefined actions for checking repository
+      uses: actions/checkout@v3
     - name: predefined actions
       uses: actions/setup-go@v2
       with:
